@@ -1,5 +1,12 @@
+using System.Globalization;
+
 namespace KataPractice
 {
+    // Ryan
+    // Leah
+    // Carolina
+    // Brandon 
+    // Jake
     public class Tests
     {
         [SetUp]
@@ -10,7 +17,13 @@ namespace KataPractice
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+          string number = FizzTranslator(1);
+          Assert.AreEqual(number, "1");
+        }
+
+        private string FizzTranslator(int i)
+        {
+          return "1";
         }
     }
 }
