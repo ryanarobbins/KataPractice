@@ -17,7 +17,10 @@ namespace KataPractice
         [TestCase(3, "Fizz")]
         [TestCase(4, "4")]
         [TestCase(5, "Buzz")]
-        [TestCase(6, "Fizz")]   
+        [TestCase(10, "Buzz")]
+        [TestCase(6, "Fizz")]
+        [TestCase(15, "FizzBuzz")]
+
         public void TestFizzTranslator_IntegerToString(int num, string expected)
         {
             string number = FizzTranslator(num);
@@ -32,7 +35,7 @@ namespace KataPractice
                 return "Fizz";
             }
 
-            if(toTranslate == 5)
+            if(toTranslate % 5 == 0)
             {
                 return "Buzz";
             }
