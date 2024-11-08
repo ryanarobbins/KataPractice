@@ -29,9 +29,21 @@ namespace KataPractice
           Assert.That(number, Is.EqualTo("2"));
         }
 
+        [Test]
+        public void Test3()
+        {
+            string number = FizzTranslator(4);
+            Assert.That(number, Is.EqualTo("4"));
+        }
+
 
         private string FizzTranslator(int toTranslate)
         {
+            if (toTranslate == 2)
+            {
+                return "2";
+            }
+
           return "1";
         }
     }
