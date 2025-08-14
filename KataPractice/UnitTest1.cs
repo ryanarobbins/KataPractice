@@ -1,11 +1,30 @@
 namespace KataPractice
 {
-    public class Tests
+  public class Tests
+  {
+    [Test]
+    public void Test()
     {
-        [Test]
-        public void Test()
-        {    
-            Assert.True(false);
-        }        
+      var result = Translate(1);
+      Assert.That(result, Is.EqualTo("1"));
+
     }
+
+    public static string Translate(int number)
+    {
+      if (number == 2)
+      {
+        return "2";
+      }
+      return "1";
+    }
+
+    [Test]
+    public void Test2()
+    {
+      var result = Translate(2);
+      Assert.That(result, Is.EqualTo("2"));
+
+    }
+  }
 }
